@@ -1,0 +1,6 @@
+<h3>Top Guests</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let guest of guests" class="col-1-4"
+    routerLink="/detail/{{guest.id}}"> <span class="badge">{{guest.id}}</span> {{guest.name}}
+  </a>
+</div>

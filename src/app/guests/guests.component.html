@@ -1,0 +1,27 @@
+<h2>My Guests</h2>
+
+<div>
+  <label>Guest name:
+    <input #guestName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(guestName.value); guestName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="guests">
+  <li *ngFor="let guest of guests"> 
+  	<a routerLink="/detail/{{guest.id}}">
+      <span class="badge">{{guest.id}}</span> {{guest.name}}
+    </a>
+    <button class="delete" title="delete guest" (click)="delete(guest)">x</button>
+  </li>
+</ul>
+
+
+
+
+
+
+
